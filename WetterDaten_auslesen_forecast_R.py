@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 import json
-import urllib
+import urllib.request
 import matplotlib.pyplot as plt
 from PIL import Image, ImageDraw, ImageFont
 from collections import Counter
@@ -13,7 +13,7 @@ def url_builder(cityName,apiKey):
 
 
 def openUrl(url):
-    url = urllib.urlopen(url)
+    url = urllib.request.urlopen(url)
     content = url.read().decode('utf-8')
     text = json.loads(content)
     url.close()

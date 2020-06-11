@@ -1,6 +1,6 @@
 ﻿from datetime import datetime, timedelta, date
 import json
-import urllib
+import urllib.request
 import time
 from PIL import Image, ImageDraw, ImageFont
 apiKey = "a0a71936f344fc6622a1d440a1ee726b"
@@ -13,7 +13,7 @@ def url_builder( StadtName, apiKey):
 
 
 def openUrl( url):
-    url = urllib.urlopen(url)
+    url = urllib.request.urlopen(url)
     content = url.read().decode('utf-8')
     datas = json.loads(content)
     url.close()
