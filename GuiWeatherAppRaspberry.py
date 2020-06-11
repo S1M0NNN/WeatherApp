@@ -7,6 +7,7 @@ import WetterDaten_auslesen_forecast_R
 import WetterDaten_auslesen_R
 
 apiKey = "a0a71936f344fc6622a1d440a1ee726b"
+city_name = "Burgrieden"
 
 class App(QWidget):
 
@@ -19,8 +20,8 @@ class App(QWidget):
             self.height = 480                
             self.loopctr = 0
             self.loopTimer = QTimer()
-            self.modelAktuell = WetterDaten_auslesen_R.WeatherDataAktuell()
-            self.modelForecast = WetterDaten_auslesen_forecast_R.WetterDatenForecast('Biberach',apiKey)
+            self.modelAktuell = WetterDaten_auslesen_R.WeatherDataAktuell(city_name,apiKey)
+            self.modelForecast = WetterDaten_auslesen_forecast_R.WetterDatenForecast(city_name,apiKey)
             self.initUI()
             self.modelAktuell.updatePaths()
             self.modelForecast.updatePaths()

@@ -4,7 +4,7 @@ import urllib.request
 import time
 from PIL import Image, ImageDraw, ImageFont
 apiKey = "a0a71936f344fc6622a1d440a1ee726b"
-StadtName = "Hochdorf"
+StadtName = "Burgrieden"
 
 
 def url_builder( StadtName, apiKey):
