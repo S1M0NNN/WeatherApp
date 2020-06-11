@@ -109,7 +109,7 @@ def createDates(black,ctr,name):
 
 
 class WeatherDataAktuell():
-    def __init__(self):
+    def __init__(self, cityName,apiKey):
         self.picturePaths = []
         self.updatePaths()
 

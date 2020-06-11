@@ -7,6 +7,7 @@ from collections import Counter
 from PyQt5.QtCore import *
 
 
+
 def url_builder(cityName,apiKey):
     url = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + ",de&appid=" + apiKey
     return url
